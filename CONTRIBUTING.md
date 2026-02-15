@@ -156,6 +156,32 @@ Colors validated:    280
 Contrast pairs:      6
 ```
 
+#### Development Scripts
+
+**`scripts/color-utils.js`** - Reusable Color Utilities
+Extracted utility functions for color validation and manipulation:
+- `validateHexColor(color)` - Validates hex color format
+- `hexToRgb(hex)` - Converts hex to RGB object
+- `getLuminance(rgb)` - Calculates WCAG relative luminance
+- `getContrastRatio(hex1, hex2)` - Computes WCAG contrast ratio
+
+Use these utilities when:
+- Extending validation logic
+- Writing new color analysis tools
+- Building theme variants programmatically
+
+**`scripts/validate-theme.js`** - Theme Validator (217 lines)
+Main validation orchestrator:
+- `validateThemeFile(filePath)` - Core validation logic
+- `validateContrast()` - WCAG AA ratio verification
+- `validateOrphanedColors()` - Ensures all palette colors are used
+- Uses `ColorUtils` module for color calculations
+
+**`scripts/build-themes.js`** - Optional Theme Builder
+(Future feature for theme consolidation)
+- For v1.1+: Reduces duplication by building themes from base + overrides
+- Current approach: Individual theme files (simpler, battle-tested)
+
 ### 4. Test in VS Code
 1. Open the `pixel-factory` folder in VS Code
 2. Press `F5` to launch extension development host
@@ -219,6 +245,34 @@ Screenshot: [attachment]
 VS Code: 1.75.1
 Theme: PixelFactory Studio
 ```
+
+## Extending the Validator
+
+To add new validation rules:
+
+1. **Add color utility functions** to `scripts/color-utils.js`:
+   ```javascript
+   function analyzeColorHarmony(colors) {
+     // New color analysis logic
+   }
+   module.exports.analyzeColorHarmony = analyzeColorHarmony;
+   ```
+
+2. **Use utilities in validator** (`scripts/validate-theme.js`):
+   ```javascript
+   const ColorUtils = require('./color-utils');
+   
+   validateHarmony() {
+     // Use ColorUtils.analyzeColorHarmony(...)
+   }
+   ```
+
+3. **Test your changes**:
+   ```bash
+   npm run validate
+   ```
+
+This modular approach keeps validation logic separated from color calculations, making the code easier to maintain and test.
 
 ## Code of Conduct
 
