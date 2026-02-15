@@ -230,7 +230,7 @@ Have feedback, questions, or found a bug? Let us know!
 
 - **GitHub Issues:** [Report bugs & request features](https://github.com/apassanisi/pixel-factory/issues)
 - **Discussions:** [Share ideas & feedback](https://github.com/apassanisi/pixel-factory/discussions)
-- **Email:** sndhl@github.com
+- **Email:** passanisi.andrew@github.com
 
 ## Showcase Your Setup
 
