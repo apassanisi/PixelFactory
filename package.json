@@ -1,7 +1,7 @@
 {
   "name": "pixel-factory",
-  "displayName": "PixelFactory",
-  "description": "A warm, cohesive color theme for VS Code with sophisticated syntax highlighting and comprehensive UI colors. Dark theme with orange accents and muted tones for comfortable, extended coding sessions.",
+  "displayName": "PixelFactory: Initiate's Lens",
+  "description": "Calibrated color theme for perceiving patterns in code-space. Warm, cohesive spectrum with sophisticated syntax highlighting. The archivist's lens for reading signals within the noise.",
   "version": "1.2.0",
   "publisher": "apassanisi",
   "author": {
@@ -34,30 +34,19 @@
     "color-scheme",
     "accessibility",
     "wcag",
+    "cosmic",
+    "signal",
+    "archivist",
+    "calibration",
     "cool-tones",
     "comfortable"
   ],
   "contributes": {
     "themes": [
       {
-        "label": "PixelFactory Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/PixelFactory.json"
-      },
-      {
-        "label": "PixelFactory Studio",
+        "label": "PixelFactory: Initiate's Lens",
         "uiTheme": "vs-dark",
         "path": "./themes/PixelFactory-Studio.json"
-      },
-      {
-        "label": "PixelFactory Light",
-        "uiTheme": "vs",
-        "path": "./themes/PixelFactory-Light.json"
-      },
-      {
-        "label": "PixelFactory High Contrast",
-        "uiTheme": "vs-dark",
-        "path": "./themes/PixelFactory-HighContrast.json"
       }
     ]
   },

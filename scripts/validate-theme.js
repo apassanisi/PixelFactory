@@ -158,10 +158,7 @@ class ThemeValidator {
   validateThemes() {
     const themeFiles = [
       'Editor.json',
-      'PixelFactory.json',
-      'PixelFactory-Studio.json',
-      'PixelFactory-Light.json',
-      'PixelFactory-HighContrast.json'
+      'PixelFactory-Studio.json'
     ];
 
     console.log('\n🎨 PixelFactory Theme Validator\n');

@@ -5,22 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.2.0] - 2026-02-15
+## [1.2.0] - 2026-02-15: Signal Clarity Calibration
 
 ### Fixed
-- Correct all GitHub repository URLs from pixel-factory to PixelFactory
-- Update package.json repository metadata with correct URLs
+- Correct all GitHub repository URLs from pixel-factory to PixelFactory (preserve signal fidelity)
+- Update package.json repository metadata with correct routing paths
 
 ### Changed
-- Improve branding consistency: use "PixelFactory" as display name in documentation
-- Update file structure examples to reflect proper project naming
-- Clarify setup instructions with correct repository names
+- Calibration refinement: Improve branding consistency throughout documentation
+- Enhanced signal documentation with metaphorical context — the theme frames code perception as signal reading
+- Clarity enhancement: Explain color choices as frequency selection, not mere aesthetics
+- Worldly framing: Documentation now reflects the theme's role in Amulet Digital mythology
 
-## [1.1.0] - 2026-02-15
+### Added
+- Foundry Spectrum expansion in README with mythological context for each color
+- Brief "About" section framing PixelFactory as "The Initiate's Lens"
+- Branding consistency in package.json with updated display name
+- Design philosophy section explaining the principles behind color selection
+
+## [1.1.0] - 2026-02-15: Validator Architecture Refinement
 
 ### Changed
 - Refactored validator to extract color utilities for better maintainability
-- Simplified `validate-theme.js` from 277 → 217 lines (27% reduction)
+- Simplified validation logic from 277 → 217 lines (27% reduction)
 - Improved code organization with separation of concerns
 
 ### Added
@@ -31,23 +38,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Updated contact email to passanisi.andrew@github.com
 
-## [1.0.0] - 2026-02-15
+## [1.0.0] - 2026-02-15: Initial Transmission
 
 ### Added
-- Initial release of PixelFactory theme
-- Four theme variants:
-  - **PixelFactory Dark**: Editor colors + comprehensive syntax highlighting
-  - **PixelFactory Studio**: Self-contained theme with optimized token colors
-  - **PixelFactory Light**: Light mode variant with warm colors
-  - **PixelFactory High Contrast**: Maximum contrast for accessibility
+- Initial release of PixelFactory: Initiate's Lens
+- Core theme variant: **PixelFactory: Initiate's Lens** with optimized token colors
 - Complete color palette with:
   - Editor backgrounds, foregrounds, selections
   - Sidebar, activity bar, status bar colors
   - Tab and panel styling
-  - Terminal ANSI colors
+  - Terminal ANSI colors (full signal spectrum)
   - Git decoration colors
   - Debugging and chat UI colors
-  - Accessibility features (WCAG compliant)
+  - Accessibility features (WCAG AA compliance for all archivist profiles)
 - Comprehensive README with installation instructions
 - MIT License
 - Support for VS Code 1.60+

@@ -34,32 +34,6 @@ function mergeThemes(base, overrides) {
 }
 
 /**
- * Build PixelFactory.json (Dark + Syntax)
- */
-function buildPixelFactoryDark() {
-  const base = JSON.parse(fs.readFileSync(BASE_THEME, 'utf8'));
-  const syntaxPath = path.join(THEME_DIR, 'tokenColors.json');
-  
-  if (!fs.existsSync(syntaxPath)) {
-    console.log('⚠️  tokenColors.json not found - skipping build');
-    return;
-  }
-  
-  const syntax = JSON.parse(fs.readFileSync(syntaxPath, 'utf8'));
-  const merged = mergeThemes(base, {
-    name: 'PixelFactory Dark',
-    uiTheme: 'vs-dark',
-    tokenColors: syntax.tokenColors || []
-  });
-  
-  fs.writeFileSync(
-    path.join(THEME_DIR, 'PixelFactory.json'),
-    JSON.stringify(merged, null, 2)
-  );
-  console.log('✓ Built PixelFactory.json');
-}
-
-/**
  * Build PixelFactory-Studio.json from base + overrides
  */
 function buildStudio() {
@@ -98,7 +72,6 @@ function build() {
   console.log('🏗️  Building PixelFactory themes...\n');
   
   try {
-    buildPixelFactoryDark();
     buildStudio();
     console.log('\n✅ Theme build complete!\n');
   } catch (error) {
@@ -112,4 +85,4 @@ if (require.main === module) {
   build();
 }
 
-module.exports = { mergeThemes, buildPixelFactoryDark, buildStudio };
+module.exports = { mergeThemes, buildStudio };

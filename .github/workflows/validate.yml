@@ -47,10 +47,7 @@ jobs:
       - name: Validate theme files exist
         run: |
           test -f themes/Editor.json || exit 1
-          test -f themes/PixelFactory.json || exit 1
           test -f themes/PixelFactory-Studio.json || exit 1
-          test -f themes/PixelFactory-Light.json || exit 1
-          test -f themes/PixelFactory-HighContrast.json || exit 1
           echo "✓ All required theme files present"
 
       - name: Comment on PR
