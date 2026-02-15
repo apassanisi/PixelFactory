@@ -3,8 +3,8 @@
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/apassanisi.pixel-factory?style=flat-square&label=VS%20Code%20Marketplace&color=007ACC)](https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/apassanisi.pixel-factory?style=flat-square&color=FF8F2E)](https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory)
 [![Rating](https://img.shields.io/visual-studio-marketplace/r/apassanisi.pixel-factory?style=flat-square&color=FFD700)](https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/apassanisi/pixel-factory/blob/main/LICENSE)
-[![GitHub Release](https://img.shields.io/github/v/release/apassanisi/pixel-factory?style=flat-square&label=GitHub%20Release)](https://github.com/apassanisi/pixel-factory/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/apassanisi/PixelFactory/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/apassanisi/PixelFactory?style=flat-square&label=GitHub%20Release)](https://github.com/apassanisi/PixelFactory/releases)
 
 A warm, cohesive color theme for VS Code with sophisticated syntax highlighting and comprehensive UI colors. Dark theme with orange accents and muted tones for comfortable, extended coding sessions.
 
@@ -94,7 +94,7 @@ code --install-extension apassanisi.pixel-factory
 ### Manual Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/apassanisi/pixel-factory ~/.vscode/extensions/pixel-factory
+   git clone https://github.com/apassanisi/PixelFactory ~/.vscode/extensions/PixelFactory
    ```
 2. Reload VS Code
 
@@ -228,14 +228,14 @@ MIT © 2026 apassanisi
 
 Have feedback, questions, or found a bug? Let us know!
 
-- **GitHub Issues:** [Report bugs & request features](https://github.com/apassanisi/pixel-factory/issues)
-- **Discussions:** [Share ideas & feedback](https://github.com/apassanisi/pixel-factory/discussions)
+- **GitHub Issues:** [Report bugs & request features](https://github.com/apassanisi/PixelFactory/issues)
+- **Discussions:** [Share ideas & feedback](https://github.com/apassanisi/PixelFactory/discussions)
 - **Email:** passanisi.andrew@github.com
 
 ## Showcase Your Setup
 
 Using PixelFactory? Show it off! Share your screenshots on:
-- [GitHub Discussions](https://github.com/apassanisi/pixel-factory/discussions)
+- [GitHub Discussions](https://github.com/apassanisi/PixelFactory/discussions)
 - [Visual Studio Marketplace Reviews](https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory#review-details)
 
 ## Acknowledgments

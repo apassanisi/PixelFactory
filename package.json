@@ -12,11 +12,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apassanisi/pixel-factory"
+    "url": "https://github.com/apassanisi/PixelFactory"
   },
-  "homepage": "https://github.com/apassanisi/pixel-factory#readme",
+  "homepage": "https://github.com/apassanisi/PixelFactory#readme",
   "bugs": {
-    "url": "https://github.com/apassanisi/pixel-factory/issues"
+    "url": "https://github.com/apassanisi/PixelFactory/issues"
   },
   "engines": {
     "vscode": "^1.60.0"
