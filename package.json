@@ -1,0 +1,79 @@
+{
+  "name": "pixel-factory",
+  "displayName": "PixelFactory",
+  "description": "A warm, cohesive color theme for VS Code with sophisticated syntax highlighting and comprehensive UI colors. Dark theme with orange accents and muted tones for comfortable, extended coding sessions.",
+  "version": "1.0.0",
+  "publisher": "sndhl",
+  "author": {
+    "name": "sndhl",
+    "email": "sndhl@github.com",
+    "url": "https://github.com/sndhl"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sndhl/pixel-factory"
+  },
+  "homepage": "https://github.com/sndhl/pixel-factory#readme",
+  "bugs": {
+    "url": "https://github.com/sndhl/pixel-factory/issues"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "warm",
+    "orange",
+    "syntax-highlighting",
+    "pixel-factory",
+    "color-scheme",
+    "accessibility",
+    "wcag",
+    "cool-tones",
+    "comfortable"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "PixelFactory Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/PixelFactory.json"
+      },
+      {
+        "label": "PixelFactory Studio",
+        "uiTheme": "vs-dark",
+        "path": "./themes/PixelFactory-Studio.json"
+      },
+      {
+        "label": "PixelFactory Light",
+        "uiTheme": "vs",
+        "path": "./themes/PixelFactory-Light.json"
+      },
+      {
+        "label": "PixelFactory High Contrast",
+        "uiTheme": "vs-dark",
+        "path": "./themes/PixelFactory-HighContrast.json"
+      }
+    ]
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#121212",
+    "theme": "dark"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-theme.js",
+    "test": "npm run validate",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "prepublish": "npm run validate"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0"
+  }
+}

@@ -1,0 +1,7 @@
+scripts/
+*.md
+.gitignore
+CHANGELOG.md
+CONTRIBUTING.md
+TECHNICAL.md
+LICENSE

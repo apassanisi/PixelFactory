@@ -1,0 +1,78 @@
+name: Validate Theme
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'themes/**'
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'themes/**'
+      - 'scripts/**'
+      - 'package.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate Theme Files
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run theme validation
+        run: npm run validate
+
+      - name: Check for JSON syntax errors
+        run: |
+          for file in themes/*.json; do
+            echo "Checking $file..."
+            jq empty "$file" || exit 1
+          done
+
+      - name: Validate theme files exist
+        run: |
+          test -f themes/Editor.json || exit 1
+          test -f themes/PixelFactory.json || exit 1
+          test -f themes/PixelFactory-Studio.json || exit 1
+          test -f themes/PixelFactory-Light.json || exit 1
+          test -f themes/PixelFactory-HighContrast.json || exit 1
+          echo "✓ All required theme files present"
+
+      - name: Comment on PR
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Theme validation failed. Please check the workflow logs for details.'
+            })
+
+      - name: Comment on PR (success)
+        if: success() && github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Theme validation passed!'
+            })

@@ -1,0 +1,16 @@
+.git
+.gitignore
+node_modules/
+.vscode/
+.github/workflows/test.yml
+scripts/validate-theme.js
+CONTRIBUTING.md
+PUBLISHING.md
+TECHNICAL.md
+QUICKSTART.md
+DEVELOPMENT.md
+PRODUCTION_REVIEW.md
+*.md
+.DS_Store
+.eslintignore
+.prettierignore
