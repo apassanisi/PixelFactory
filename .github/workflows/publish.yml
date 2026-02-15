@@ -31,10 +31,3 @@ jobs:
         run: npx @vscode/vsce publish -p ${{ secrets.VSCE_PAT }} --no-update-package-json
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-
-      - name: Upload Release Asset
-        uses: softprops/action-gh-release@v1
-        with:
-          files: '*.vsix'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
