@@ -33,6 +33,31 @@ A warm, cohesive color theme for VS Code with sophisticated syntax highlighting 
 code --install-extension apassanisi.pixel-factory
 ```
 
+## 🎨 Recommended Companions
+
+**Enhance your PixelFactory experience with these complementary tools:**
+
+### Icon Theme
+- **[Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=JonathanHarty.gruvbox-material-icon-theme)** by JonathanHarty (112K+ installs)
+  - Warm, earthy tones that pair beautifully with PixelFactory's color palette
+  - Comprehensive icon coverage for all file types
+  - Install: `code --install-extension JonathanHarty.gruvbox-material-icon-theme`
+
+### Font
+- **[Basis33](https://www.dafont.com/basis33.font)** on DaFont
+  - Clean, monospace font designed for coding
+  - Excellent readability at any size
+  - Free and open-source
+
+**Recommended Font Settings for VS Code:**
+```json
+{
+  "editor.fontFamily": "'Basis33', 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.6
+}
+```
+
 ## Features
 
 ✨ **Warm, Sophisticated Design**
