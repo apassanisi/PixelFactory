@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-02-15
+
+### Fixed
+- Correct all GitHub repository URLs from pixel-factory to PixelFactory
+- Update package.json repository metadata with correct URLs
+
+### Changed
+- Improve branding consistency: use "PixelFactory" as display name in documentation
+- Update file structure examples to reflect proper project naming
+- Clarify setup instructions with correct repository names
+
 ## [1.1.0] - 2026-02-15
 
 ### Changed
