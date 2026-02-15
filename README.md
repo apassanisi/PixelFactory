@@ -242,6 +242,9 @@ Using PixelFactory? Show it off! Share your screenshots on:
 
 Built with careful attention to color theory, accessibility standards, and community feedback.
 
+**Special thanks to:**
+- **[Railgun Theme](https://marketplace.visualstudio.com/items?itemName=be5invis.theme-railgun)** by be5invis for design inspiration
+
 ---
 
 **Made with ❤️ by [apassanisi](https://github.com/apassanisi)**
