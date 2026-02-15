@@ -177,7 +177,7 @@ To customize the theme, create a `settings.json` override:
 ## File Structure
 
 ```
-pixel-factory/
+PixelFactory/
 ├── package.json          # Extension metadata
 ├── README.md            # This file
 ├── LICENSE              # MIT License

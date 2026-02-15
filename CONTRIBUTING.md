@@ -12,8 +12,8 @@ Thank you for your interest in contributing! This guide explains how to contribu
 ### Setup
 1. Fork and clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/pixel-factory.git
-   cd pixel-factory
+   git clone https://github.com/YOUR_USERNAME/PixelFactory.git
+   cd PixelFactory
    ```
 
 2. Install dependencies:
@@ -183,7 +183,7 @@ Main validation orchestrator:
 - Current approach: Individual theme files (simpler, battle-tested)
 
 ### 4. Test in VS Code
-1. Open the `pixel-factory` folder in VS Code
+1. Open the `PixelFactory` folder in VS Code
 2. Press `F5` to launch extension development host
 3. Switch to your modified theme
 4. Test various file types (JavaScript, CSS, Markdown, etc.)
