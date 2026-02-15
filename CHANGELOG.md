@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-02-15
+
+### Changed
+- Refactored validator to extract color utilities for better maintainability
+- Simplified `validate-theme.js` from 277 → 217 lines (27% reduction)
+- Improved code organization with separation of concerns
+
+### Added
+- New `scripts/color-utils.js` module with reusable color validation functions
+- Optional `scripts/build-themes.js` for future theme consolidation
+- Developer documentation for extending the validator
+
+### Fixed
+- Updated contact email to passanisi.andrew@github.com
+
 ## [1.0.0] - 2026-02-15
 
 ### Added
