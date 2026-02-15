@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -24,14 +24,11 @@ jobs:
       - name: Run validation
         run: npm run validate
 
-      - name: Install VSCE
-        run: npm install -g @vscode/vsce
-
       - name: Create VSIX package
-        run: vsce package
+        run: npx @vscode/vsce package --no-update-package-json
 
       - name: Publish to Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_PAT }}
+        run: npx @vscode/vsce publish -p ${{ secrets.VSCE_PAT }} --no-update-package-json
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
