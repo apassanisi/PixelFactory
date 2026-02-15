@@ -4,11 +4,7 @@
   "description": "The Initiate's Lens — Signal calibration protocol. A warm, sophisticated VS Code theme built on signal frequency principles for reading patterns in code.",
   "version": "1.3.0",
   "publisher": "apassanisi",
-  "author": {
-    "name": "apassanisi",
-    "email": "passanisi.andrew@github.com",
-    "url": "https://github.com/apassanisi"
-  },
+  "author": "apassanisi",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -39,7 +35,9 @@
     "archivist",
     "calibration",
     "cool-tones",
-    "comfortable"
+    "comfortable",
+    "signal-archives",
+    "amulet-digital"
   ],
   "contributes": {
     "themes": [

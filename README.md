@@ -1,6 +1,7 @@
 <div align="center">
   <h2 align="center">🎨 PixelFactory</h2>
   <p align="center"><strong>The Initiate's Lens — Signal Calibration Protocol</strong></p>
+  <p align="center"><em>Part of the <a href="https://github.com/apassanisi/signal-archives">Signal Archives</a></em></p>
   <p align="center">A warm, sophisticated color theme for VS Code built around signal frequency principles.
     <br />
 <a href="https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory"><strong>View on Marketplace »</strong></a>
@@ -13,22 +14,44 @@
 
 </div>
 
-## Design Philosophy
+## About
 
-Color is a communication tool. PixelFactory organizes syntax and UI around a **signal frequency system**—each color serves a distinct purpose in guiding attention and preserving information through long coding sessions.
+PixelFactory is the Signal Archives' calibration device for perceiving cosmic patterns in code. Every color is precisely positioned to maximize readability and minimize cognitive load during extended archival sessions.
 
-Think of it as a **signal calibration device**: Ember Orange marks active transmissions, Sage Green preserves encoded data, Steel Gray provides neutral ground. Together they form a cohesive visual language engineered for readability and visual comfort.
+## Features
 
-✨ **Warm, Sophisticated** — Deep dark backgrounds with warm accent colors  
-🎨 **Comprehensive** — 220+ colors across all UI elements  
-🔤 **Optimized Syntax** — Support for 15+ languages  
-♿ **Accessible** — WCAG AA compliant contrast ratios
+✨ **Warm, Sophisticated** — Deep dark backgrounds with warm accent colors engineered for visual comfort  
+🎨 **Comprehensive** — 220+ colors across all UI elements, syntax highlighting, and terminal output  
+🔤 **Optimized Syntax** — Support for 15+ programming languages with intelligent semantic highlighting  
+♿ **Accessible** — WCAG AA compliant contrast ratios ensuring readability for all users  
+🔧 **Highly Customizable** — Override any color directly in VS Code settings  
+📡 **Signal Frequencies** — Colors mapped to functional intent using archival principles  
 
 ## Installation
 
 1. Open Extensions (<kbd>Ctrl+Shift+X</kbd> / <kbd>Cmd+Shift+X</kbd>)
 2. Search for "PixelFactory" and click **Install**
 3. Open Command Palette (<kbd>Ctrl+Shift+P</kbd>) and select a **PixelFactory** theme
+
+## Usage
+
+Once installed, PixelFactory is immediately active. The theme applies to:
+
+- **Syntax highlighting** — Code elements colored by type and semantic meaning
+- **UI elements** — Panels, sidebars, and controls use the Foundry Spectrum
+- **Terminal** — ANSI colors calibrated for clarity in terminal output
+- **Debugging** — Special colors for breakpoints, debug console, and variables
+
+### Switching Themes
+
+Use the Command Palette:
+1. <kbd>Ctrl+Shift+P</kbd> (Windows/Linux) or <kbd>Cmd+Shift+P</kbd> (Mac)
+2. Search "Preferences: Color Theme"
+3. Select "PixelFactory: Initiate's Lens"
+
+Or through Settings:
+1. File → Preferences → Color Theme
+2. Select "PixelFactory: Initiate's Lens"
 
 ## Preview
 
@@ -116,3 +139,15 @@ MIT © 2026 apassanisi
 **Made with care by [apassanisi](https://github.com/apassanisi)**
 
 **Code reads better in color.** 🎨
+
+## Field Notes
+
+In the Signal Archives, every tool serves a purpose in the archival network. PixelFactory: The Initiate's Lens is designed as a calibration device—a way to perceive patterns in the cosmic signal as it flows through code.
+
+The color palette (the Foundry Spectrum) maps visual frequency to functional intent: Ember Orange for active transmissions you're currently working with, Sage Green for data being preserved, Steel Gray for the neutral ground. Using these calibrated frequencies, archivists can read large codebases with less cognitive friction, maintaining signal integrity over long sessions.
+
+Whether you engage with the mythology or not, the theme works—the colors are scientifically optimized for readability, comfort, and visual hierarchy.
+
+---
+
+**Signal integrity maintained • Amulet Digital Archive Protocol**
