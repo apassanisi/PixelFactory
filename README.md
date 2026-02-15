@@ -1,6 +1,7 @@
 <div align="center">
   <h2 align="center">🎨 PixelFactory</h2>
-  <p align="center">A warm, sophisticated color theme for VS Code
+  <p align="center"><strong>The Initiate's Lens — Signal Calibration Protocol</strong></p>
+  <p align="center">A warm, sophisticated color theme for VS Code built around signal frequency principles.
     <br />
 <a href="https://marketplace.visualstudio.com/items?itemName=apassanisi.pixel-factory"><strong>View on Marketplace »</strong></a>
   </p>
@@ -14,7 +15,9 @@
 
 ## Design Philosophy
 
-Color is a communication tool. PixelFactory organizes syntax and UI around a "signal frequency" system—each color serves a specific purpose in guiding attention and organizing information. Warm orange for active regions, sage green for data, steel gray for neutral ground. The result is a cohesive, readable theme built for long coding sessions.
+Color is a communication tool. PixelFactory organizes syntax and UI around a **signal frequency system**—each color serves a distinct purpose in guiding attention and preserving information through long coding sessions.
+
+Think of it as a **signal calibration device**: Ember Orange marks active transmissions, Sage Green preserves encoded data, Steel Gray provides neutral ground. Together they form a cohesive visual language engineered for readability and visual comfort.
 
 ✨ **Warm, Sophisticated** — Deep dark backgrounds with warm accent colors  
 🎨 **Comprehensive** — 220+ colors across all UI elements  
@@ -37,13 +40,16 @@ Color is a communication tool. PixelFactory organizes syntax and UI around a "si
 
 ## The Foundry Spectrum
 
-The palette is organized around a signal frequency system—each color serves a distinct purpose in organizing information and guiding attention.
+Colors organized as signal frequencies—each serves a distinct purpose in guiding attention and preserving information.
 
-**Core Frequencies:** Primary `#121212` · Secondary `#1e1e1e` · Tertiary `#2a2a2a`
+**Primary Frequencies:**  
+Void Black `#121212` · Ember Orange `#FF8F2E` · Steel Gray `#798283` · Sage Green `#8A9E78`
 
-**Syntax Colors:** Ember Orange `#FF8F2E` · Sage Green `#8A9E78` · Warm Red `#ea603e` · Golden `#FFC62F`
+**Accent Signals:**  
+Golden Yellow `#FFC62F` · Mauve `#CF7F8F` · Bronze `#7f7b66`
 
-**Diagnostic:** Error `#C71B00` · Warning `#FFC62F` · Success `#A6E22E`
+**Diagnostic Frequencies:**  
+Error `#C71B00` · Warning `#FFC62F` · Success `#A6E22E`
 
 ## Customization
 
