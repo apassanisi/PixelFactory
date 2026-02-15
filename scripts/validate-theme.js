@@ -7,17 +7,15 @@
  * - Valid JSON syntax
  * - Required properties
  * - Color format consistency
- * - Cross-file references
  * - WCAG contrast ratios (AA standard)
- * - Orphaned/unused colors
  */
 
 const fs = require('fs');
 const path = require('path');
+const colors = require('./color-utils');
 
 const THEME_DIR = path.join(__dirname, '../themes');
 
-// Define the palette with usage contexts
 const PALETTE = {
   'bg1': { hex: '#121212', usage: 'primary background' },
   'bg2': { hex: '#1e1e1e', usage: 'secondary background' },
@@ -36,7 +34,6 @@ const PALETTE = {
   'invalid': { hex: '#C71B00', usage: 'invalid/error states' }
 };
 
-// WCAG contrast ratio reference pairs
 const CONTRAST_PAIRS = [
   { foreground: '#798283', background: '#121212', minRatio: 4.5 },
   { foreground: '#8A9E78', background: '#121212', minRatio: 4.5 },
@@ -59,53 +56,17 @@ class ThemeValidator {
     this.usedColors = new Set();
   }
 
-  validateHexColor(color) {
-    return /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/.test(color);
-  }
-
-  hexToRgb(hex) {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/i.exec(hex);
-    return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    } : null;
-  }
-
-  getLuminance(rgb) {
-    const { r, g, b } = rgb;
-    const [rs, gs, bs] = [r, g, b].map(x => {
-      x = x / 255;
-      return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
-    });
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  }
-
-  getContrastRatio(hex1, hex2) {
-    const rgb1 = this.hexToRgb(hex1);
-    const rgb2 = this.hexToRgb(hex2);
-    
-    if (!rgb1 || !rgb2) return 0;
-    
-    const lum1 = this.getLuminance(rgb1);
-    const lum2 = this.getLuminance(rgb2);
-    const lighter = Math.max(lum1, lum2);
-    const darker = Math.min(lum1, lum2);
-    
-    return (lighter + 0.05) / (darker + 0.05);
-  }
-
   validateContrast() {
     console.log('\n📏 Checking WCAG Contrast Ratios (AA standard: 4.5:1 for text)...\n');
     
     CONTRAST_PAIRS.forEach(pair => {
-      const ratio = this.getContrastRatio(pair.foreground, pair.background);
+      const ratio = colors.getContrastRatio(pair.foreground, pair.background);
       this.stats.contrastChecked++;
       
       const status = ratio >= pair.minRatio ? '✓' : '✗';
       const ratioStr = ratio.toFixed(2);
       
-      // Comments intentionally have lower contrast, so allow 2.5:1 minimum
+      // Comments intentionally have lower contrast
       const isComment = pair.foreground === '#5f5f5f';
       const minAllowed = isComment ? 2.5 : pair.minRatio;
       
@@ -119,7 +80,18 @@ class ThemeValidator {
     });
   }
 
-  validateThemeFile(filePath) {
+  validateColorInTheme(fileName, colorValue) {
+    this.stats.colorsValidated++;
+    
+    if (!colors.validateHexColor(colorValue)) {
+      this.errors.push(`${fileName}: Invalid color "${colorValue}"`);
+      this.stats.issuesFound++;
+    }
+    
+    this.usedColors.add(colorValue.toUpperCase());
+  }
+
+  validateThemFile(filePath) {
     const fileName = path.basename(filePath);
     
     try {
@@ -128,7 +100,7 @@ class ThemeValidator {
       
       this.stats.filesChecked++;
       
-      // Validate schema
+      // Validate schema and name
       if (!theme.$schema || !theme.$schema.includes('color-theme')) {
         this.warnings.push(`${fileName}: Missing or invalid $schema`);
       }
@@ -137,50 +109,21 @@ class ThemeValidator {
         this.errors.push(`${fileName}: Missing theme name`);
       }
       
-      // If has colors, validate them
+      // Validate colors section
       if (theme.colors && typeof theme.colors === 'object') {
-        Object.entries(theme.colors).forEach(([key, value]) => {
-          this.stats.colorsValidated++;
-          
-          if (!this.validateHexColor(value)) {
-            this.errors.push(
-              `${fileName}: Invalid color "${value}" for key "${key}"`
-            );
-            this.stats.issuesFound++;
-          }
-          
-          // Track used colors for orphan detection
-          this.usedColors.add(value.toUpperCase());
+        Object.values(theme.colors).forEach(color => {
+          this.validateColorInTheme(fileName, color);
         });
       }
       
-      // If has tokenColors, validate them
+      // Validate tokenColors section
       if (Array.isArray(theme.tokenColors)) {
         theme.tokenColors.forEach((token, idx) => {
-          if (token.settings && token.settings.foreground) {
-            this.stats.colorsValidated++;
-            
-            if (!this.validateHexColor(token.settings.foreground)) {
-              this.errors.push(
-                `${fileName} tokenColors[${idx}]: Invalid foreground color "${token.settings.foreground}"`
-              );
-              this.stats.issuesFound++;
-            }
-            
-            this.usedColors.add(token.settings.foreground.toUpperCase());
+          if (token.settings?.foreground) {
+            this.validateColorInTheme(fileName, token.settings.foreground);
           }
-          
-          if (token.settings && token.settings.background) {
-            this.stats.colorsValidated++;
-            
-            if (!this.validateHexColor(token.settings.background)) {
-              this.errors.push(
-                `${fileName} tokenColors[${idx}]: Invalid background color "${token.settings.background}"`
-              );
-              this.stats.issuesFound++;
-            }
-            
-            this.usedColors.add(token.settings.background.toUpperCase());
+          if (token.settings?.background) {
+            this.validateColorInTheme(fileName, token.settings.background);
           }
         });
       }
@@ -233,13 +176,11 @@ class ThemeValidator {
       }
       
       console.log(`\n✓ Validating ${file}...`);
-      this.validateThemeFile(filePath);
+      this.validateThemFile(filePath);
     });
 
-    // Run additional validations
     this.validateContrast();
     this.validateOrphanedColors();
-
     this.printResults();
   }
 
@@ -271,6 +212,6 @@ class ThemeValidator {
   }
 }
 
-// Run validation
 const validator = new ThemeValidator();
 process.exit(validator.validateThemes());
+
