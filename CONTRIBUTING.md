@@ -231,7 +231,7 @@ Theme: PixelFactory Studio
 
 - Check existing issues and PRs
 - Open a discussion for design questions
-- Tag maintainers with `@sndhl`
+- Tag maintainers with `@apassanisi`
 
 ## Publishing Updates
 

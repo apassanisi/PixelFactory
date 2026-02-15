@@ -3,20 +3,20 @@
   "displayName": "PixelFactory",
   "description": "A warm, cohesive color theme for VS Code with sophisticated syntax highlighting and comprehensive UI colors. Dark theme with orange accents and muted tones for comfortable, extended coding sessions.",
   "version": "1.0.0",
-  "publisher": "sndhl",
+  "publisher": "apassanisi",
   "author": {
-    "name": "sndhl",
+    "name": "apassanisi",
     "email": "sndhl@github.com",
-    "url": "https://github.com/sndhl"
+    "url": "https://github.com/apassanisi"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sndhl/pixel-factory"
+    "url": "https://github.com/apassanisi/pixel-factory"
   },
-  "homepage": "https://github.com/sndhl/pixel-factory#readme",
+  "homepage": "https://github.com/apassanisi/pixel-factory#readme",
   "bugs": {
-    "url": "https://github.com/sndhl/pixel-factory/issues"
+    "url": "https://github.com/apassanisi/pixel-factory/issues"
   },
   "engines": {
     "vscode": "^1.60.0"

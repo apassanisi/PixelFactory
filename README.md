@@ -49,7 +49,7 @@ A warm, cohesive color theme for VS Code with sophisticated syntax highlighting 
 ### Manual Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/sndhl/pixel-factory ~/.vscode/extensions/pixel-factory
+   git clone https://github.com/apassanisi/pixel-factory ~/.vscode/extensions/pixel-factory
    ```
 2. Reload VS Code
 
@@ -177,13 +177,13 @@ Contributions are welcome! Please:
 
 ## License
 
-MIT © 2026 sndhl
+MIT © 2026 apassanisi
 
 ## Support
 
 For issues, feature requests, or feedback:
-- GitHub Issues: https://github.com/sndhl/pixel-factory/issues
-- Discussions: https://github.com/sndhl/pixel-factory/discussions
+- GitHub Issues: https://github.com/apassanisi/pixel-factory/issues
+- Discussions: https://github.com/apassanisi/pixel-factory/discussions
 
 ## Acknowledgments
 
